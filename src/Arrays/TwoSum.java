@@ -15,4 +15,16 @@ public class TwoSum {
         System.out.println(integerMap);
         return new int[]{};
     }
+
+    public static int[] solutionTwo(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+
+            int alpha = target - nums[i];
+            if (map.containsKey(alpha))return new int[]{map.get(alpha),i};
+            map.putIfAbsent(nums[i], i);
+        }
+        System.out.println(map);
+        return null;
+    }
 }

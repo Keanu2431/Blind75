@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.*;
 
-public class DoubleAnagram {
+public class GroupAnagram {
     public static List<List<String>> solution(String[] strs) {
 //        CREATE RESPONSE ARRAY
         List<List<String>> res = new ArrayList<>();
@@ -31,5 +31,24 @@ public class DoubleAnagram {
         return res;
     }
 
+    public static List<List<String>> solutionTwo(String[] strs) {
+        HashMap<List<Integer>, List<String>> map = new HashMap<>();
+        for (int i = 0; i < strs.length; i++) {
+            int[] charHash = new int[26];
+            for (char c : strs[i].toCharArray()) {
+                charHash[c - 'a'] += 1;
+            }
+            ArrayList<Integer> listKey = new ArrayList<>();
+            for (int k : charHash) {
+                listKey.add(k);
+            }
+            map.putIfAbsent(listKey, new ArrayList<>());
+            map.get(listKey).add(strs[i]);
+        }
 
+        List<List<String>> res = new ArrayList<>();
+        res.addAll(map.values());
+//        System.out.println(map);
+        return res;
+    }
 }

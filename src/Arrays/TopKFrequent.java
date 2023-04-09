@@ -3,7 +3,7 @@ package Arrays;
 import java.util.*;
 
 public class TopKFrequent {
-//        RETURN THE K MOST FREQUENT ELEMENTS
+    //        RETURN THE K MOST FREQUENT ELEMENTS
     public static List<Integer> solution(int[] nums, int k) {
         List<Integer> res = new ArrayList<>();
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -25,6 +25,24 @@ public class TopKFrequent {
 //           .poll() Retrieves and removes the head of this queue/heap
             res.add(heap.poll());
         }
+        return res;
+    }
+
+    public static List<Integer> solutionTwo(int[] nums, int k) {
+        List<Integer> res = new ArrayList<>();
+//        GET ARRAY ONLY ADD FIRST TWO
+//        GET OCCURRENCE COUNTS
+        HashMap<Integer, Integer> occurrenceMap = new HashMap<>();
+        for (Integer i : nums) {
+            occurrenceMap.putIfAbsent(i, 0);
+            occurrenceMap.computeIfPresent(i, (a, b) -> b + 1);
+        }
+//
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> occurrenceMap.get(b) - occurrenceMap.get(a));
+//        System.out.println(pq);
+        for (Integer key : occurrenceMap.keySet()) pq.add(key);
+//        System.out.println(pq);
+        for (int i = 0; i < k; i++) res.add(pq.poll());
         return res;
     }
 }
