@@ -1,11 +1,11 @@
-import Arrays.TopKFrequent;
+import Arrays.ProductExceptSelf;
 
-import java.util.List;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> i = TopKFrequent.solutionTwo(new int[]{1, 1, 1, 2, 2, 3}, 2);
-        System.out.println(i);
+       int[] i = ProductExceptSelf.solution(new int[]{1,2,3,4});
+        System.out.println(Arrays.toString(i));
     }
 }
