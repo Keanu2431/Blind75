@@ -32,15 +32,17 @@ public class TopKFrequent {
         List<Integer> res = new ArrayList<>();
 //        GET ARRAY ONLY ADD FIRST TWO
 //        GET OCCURRENCE COUNTS
-        HashMap<Integer, Integer> occurrenceMap = new HashMap<>();
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
         for (Integer i : nums) {
-            occurrenceMap.putIfAbsent(i, 0);
-            occurrenceMap.computeIfPresent(i, (a, b) -> b + 1);
+            frequencyMap.putIfAbsent(i, 0);
+            frequencyMap.computeIfPresent(i, (a, b) -> b + 1);
         }
-//
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> occurrenceMap.get(b) - occurrenceMap.get(a));
+//      CREATE A PRIORITY QUE/HEAP
+//      ELEMENTS ADDED IN DESCENDING ORDER
+//      WHEN ELEMENT IS ADDED TO THE QUE eg:1, we get the corresponding freq count from the map
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> frequencyMap.get(b) - frequencyMap.get(a));
 //        System.out.println(pq);
-        for (Integer key : occurrenceMap.keySet()) pq.add(key);
+        for (Integer key : frequencyMap.keySet()) pq.add(key);
 //        System.out.println(pq);
         for (int i = 0; i < k; i++) res.add(pq.poll());
         return res;
