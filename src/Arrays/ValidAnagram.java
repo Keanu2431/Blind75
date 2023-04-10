@@ -13,4 +13,18 @@ public class ValidAnagram {
         }
         return true;
     }
+
+    public static boolean solutionTwo(String s, String t) {
+
+        if (s.length() != t.length()) return false;
+
+        int[] charHash = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            charHash[s.charAt(i) - 'a'] += 1;
+            charHash[t.charAt(i) - 'a'] -= 1;
+        }
+        for (int i : charHash) if (i != 0) return false;
+        return true;
+    }
 }
