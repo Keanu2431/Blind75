@@ -1,7 +1,10 @@
-import TwoPointers.IsPalindrome;
+import TwoPointers.ThreeSum;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(IsPalindrome.solution("A man, a plan, a canal: Panama"));
+        List<List<Integer>> i = ThreeSum.solution(new int[]{-1, 0, 1, 2, -1, -4});
+        System.out.println(i);
     }
 }
