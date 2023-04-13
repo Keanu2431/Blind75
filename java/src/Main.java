@@ -1,8 +1,10 @@
-import SlidingWindow.CharacterReplacement;
+import BinarySearch.FindMinimumInRotatedSortedArray;
 
 public class Main {
     public static void main(String[] args) {
-        int i = CharacterReplacement.solution("ABAB",2);
-        System.out.println("Final: "+i);
+        int i = FindMinimumInRotatedSortedArray.solution(new int[]{3, 4, 5, 1, 2});
+//        boolean i = ValidParentheses.solution("()");
+//        boolean i = ValidParentheses.solution("(]");
+        System.out.println("Final: " + i);
     }
 }
