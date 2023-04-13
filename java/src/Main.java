@@ -1,10 +1,8 @@
-import TwoPointers.ThreeSum;
-
-import java.util.List;
+import SlidingWindow.MaxProfit;
 
 public class Main {
     public static void main(String[] args) {
-        List<List<Integer>> i = ThreeSum.solution(new int[]{-1, 0, 1, 2, -1, -4});
+        int i = MaxProfit.solution(new int[]{7, 1, 5, 3, 6, 4});
         System.out.println(i);
     }
 }

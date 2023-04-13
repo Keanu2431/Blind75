@@ -1,6 +1,6 @@
 package TwoPointers;
 
-public class IsPalindrome {
+public class ValidPalindrome {
     public static boolean solution(String s) {
         s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
         StringBuilder reverse = new StringBuilder();
