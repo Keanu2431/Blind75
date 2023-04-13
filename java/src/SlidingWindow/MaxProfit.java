@@ -17,9 +17,20 @@ public class MaxProfit {
 //        return maxProfit;
 //    }
     public static int solution(int[] prices) {
-        int maxProfit = 0;
-        for (int i = 0; i < prices.length; i++) {
+        int maxProfit = 0, left = 0, right = 1;
+//        WHILE RIGHT INDEX IS STILL IN BOUND
+        while (right < prices.length) {
+//            IF NEXT DAY PRICE IS GREATER IT MEANS WE'RE IN PROFIT
+            if (prices[right] > prices[left]) {
+//              UPDATE MAX PROFIT TO BE THE GREATER OF THE TWO
+                maxProfit = Math.max(maxProfit, prices[right] - prices[left]);
 
+            } else {
+//
+                left = right;
+            }
+//          MOVE OVER TO THE NEXT DAY
+            right++;
         }
         return maxProfit;
     }
