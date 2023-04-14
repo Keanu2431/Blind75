@@ -1,9 +1,10 @@
-import BinarySearch.RotatedSortedArraySearch;
+import LinkedList.ListNode;
+import LinkedList.ReverseLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        int i = RotatedSortedArraySearch
-                .solution(new int[]{4,5,6,7,0,1,2},0);
+        ListNode i = ReverseLinkedList
+                .solution( new  ListNode());
         System.out.println("Final: " + i);
     }
     
