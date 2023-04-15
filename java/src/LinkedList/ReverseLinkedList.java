@@ -2,17 +2,14 @@ package LinkedList;
 
 public class ReverseLinkedList {
     public static ListNode solution(ListNode head) {
-        ListNode p = null;
-        ListNode q = null;
-        ListNode r = head;
-        while (r != null) {
-            System.out.println(r);
-            p = q;
-            q = r;
-            r = r.next;
-            q.next = p;
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
         }
-        return q;
-
+        return prev;
+        
     }
 }
