@@ -15,7 +15,6 @@ public class EncodeDecodeStrings {
         for (String s : strs) {
             str.append(s).append("%nl%");
         }
-
         return str.toString();
     }
 
@@ -25,7 +24,6 @@ public class EncodeDecodeStrings {
      */
     static public List<String> decode(String str) {
         // write your code here
-
         return new ArrayList<>(List.of(str.split("%nl%")));
     }
 }

@@ -10,8 +10,6 @@ public class ProductExceptSelf {
         for (int i = 0; i < nums.length; i++) {
             arr[i] = left;
             left *= nums[i];
-            System.out.println(Arrays.toString(arr));
-
         }
 //        1,1,2,8
         for (int i = nums.length - 1; i >= 0; i--) {
