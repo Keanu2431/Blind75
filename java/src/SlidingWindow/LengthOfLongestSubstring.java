@@ -15,13 +15,31 @@ public class LengthOfLongestSubstring {
                 characterHashSet.add(sChar[right]);
                 right++;
                 maxLength = Math.max(maxLength, characterHashSet.size());
-            }else{
+            } else {
                 characterHashSet.remove(sChar[left]);
                 left++;
             }
 
         }
         return maxLength;
+    }
+
+    static public int solutionT(String s) {
+//        abcabc
+        HashSet<Character> characterHashSet = new HashSet<>();
+        char[] chars = s.toCharArray();
+        int left = 0, right = 0, longest = 0;
+        while (right < chars.length) {
+            if (!characterHashSet.contains(chars[right])) {
+                characterHashSet.add(chars[right]);
+                right++;
+                longest = Math.max(longest, characterHashSet.size());
+            }else{
+                characterHashSet.remove(chars[left]);
+                left++;
+            }
+        }
+        return longest;
     }
 }
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/
