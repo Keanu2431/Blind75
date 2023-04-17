@@ -19,7 +19,6 @@ public class LongestConsecutive {
                 count = 1;
             }
         }
-
         answer = Math.max(answer, count);
         return answer;
 

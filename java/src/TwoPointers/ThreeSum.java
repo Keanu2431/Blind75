@@ -49,4 +49,7 @@ public class ThreeSum {
         }
         return res;
     }
+    static public List<List<Integer>> solutionT(int[] nums){
+
+    }
 }
