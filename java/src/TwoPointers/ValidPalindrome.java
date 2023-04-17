@@ -2,13 +2,15 @@ package TwoPointers;
 
 public class ValidPalindrome {
     public static boolean solution(String s) {
+        if (!(s.length()>1))return true;
         s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
-        StringBuilder reverse = new StringBuilder();
-        for (int i = s.length() - 1; i >= 0; i--) {
-
-            reverse.append(s.charAt(i));
+        
+        int left = 0, right = s.length() - 1;
+        while (left <= right) {
+            if (s.charAt(left) != s.charAt(right)) return false;
+            left++;
+            right--;
         }
-        System.out.println(reverse);
-        return s.equals(reverse.toString());
+        return true;
     }
 }
