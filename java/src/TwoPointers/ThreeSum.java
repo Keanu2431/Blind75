@@ -7,7 +7,7 @@ import java.util.List;
 public class ThreeSum {
     static public List<List<Integer>> solution(int[] nums) {
         Arrays.sort(nums);
-
+        
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length - 2; i++) {
 //            IF ITS THE FIRST ITERATION OR CURRENT NUMBER ISN'T
@@ -31,7 +31,7 @@ public class ThreeSum {
                             left++;
                         }
 //                      IF N[RIGHT] IS THE SAME NUMBER AS THE NEXT RIGHT ELEMENT SKIP OVER IT
-
+                        
                         while (left < right && nums[right] == nums[right - 1]) {
                             right--;
                         }
@@ -40,7 +40,7 @@ public class ThreeSum {
 //                      IF GREATER THAN TARGET WE NEED A SMALLER NUMBER SO WE GO DOWN ONE RIGHT
                     } else if (nums[left] + nums[right] > target) {
                         right--;
-     //                   IF SMALLER THAN TARGET WE NEED A BIGGER NUMBER SO WE GO UP ONE LEFT
+                        //                   IF SMALLER THAN TARGET WE NEED A BIGGER NUMBER SO WE GO UP ONE LEFT
                     } else {
                         left++;
                     }
@@ -49,7 +49,30 @@ public class ThreeSum {
         }
         return res;
     }
-    static public List<List<Integer>> solutionT(int[] nums){
-
+    
+    static public List<List<Integer>> solutionT(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i == 0 || nums[i] != nums[i - 1]) {
+                int left = nums[i + 1];
+                int right = nums[nums.length - 1];
+                int target = 0 - nums[i];
+                while (left < right) {
+                    if (left + right == target) {
+                        List<Integer> solution = Arrays.asList(nums[i], left, right);
+                        res.add(solution);
+                        left++;
+                        right--;
+                    } else if (left + right > target) right--;
+                    else left++;
+                }
+            }
+            
+        }
+        return res;
     }
-}
+    
+};
+//[-1,0,1,2,-1,-4]
+//        Output: [[-1,-1,2],[-1,0,1]]
