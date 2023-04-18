@@ -1,7 +1,7 @@
 package BinarySearch;
 
 public class FindMinimumInRotatedSortedArray {
-        public static int solution(int[] nums) {
+    public static int solution(int[] nums) {
         int left = 0, right = nums.length - 1;
         while (left <= right) {
             if (nums[left] <= nums[right]) return nums[left];
@@ -16,5 +16,6 @@ public class FindMinimumInRotatedSortedArray {
         }
         return 0;
     }
-    
+
+
 }

@@ -1,35 +1,32 @@
 package Stack;
 
+import java.util.Stack;
+
 public class ValidParentheses {
-    public static boolean solution(String s) {
-        boolean v = true;
-        int left = 0, right = 1;
+    public boolean solution(String s) {
+        if (s.length() % 2 != 0) return false;
+        Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            if (i == s.length() - 1) {
-                switch (s.charAt(i)) {
-                    case ')' -> v = s.charAt(i - 1) == '(';
-                    case ']' -> v = s.charAt(i - 1) == '[';
-                    case '}' -> v = s.charAt(i - 1) == '{';
-                }
-            } else if (i == 0) {
-                switch (s.charAt(i)) {
-                    case '(' -> v = s.charAt(i + 1) == ')';
-                    case '[' -> v = s.charAt(i + 1) == ']';
-                    case '{' -> v = s.charAt(i + 1) == '}';
-                }
+            if (
+                    stack.isEmpty() &&
+                            (s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']')
+            ) return false;
+            else {
+                if (!stack.isEmpty()) {
+                    if (
+                            stack.peek() == '(' && s.charAt(i) == ')'
+                    ) stack.pop();
+                    else if (
+                            stack.peek() == '{' && s.charAt(i) == '}'
+                    ) stack.pop();
+                    else if (
+                            stack.peek() == '[' && s.charAt(i) == ']'
+                    ) stack.pop();
+                    else stack.add(s.charAt(i));
+                } else stack.add(s.charAt(i));
             }
-
         }
-
-//        while (right < s.length()) {
-//            char[] chars = new char[]{s.charAt(left), s.charAt(right)};
-//            switch (chars[0]){
-//                case:
-//            }
-//            left++;
-//            right++;
-//        }
-        return v;
+        return stack.isEmpty();
     }
 }
 //https://leetcode.com/problems/valid-parentheses/

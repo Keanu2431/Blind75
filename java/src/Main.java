@@ -1,7 +1,7 @@
-import TwoPointers.MostWater;
+import BinarySearch.BinarySearch;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(MostWater.solution(new int[]{1,8,6,2,5,4,8,3,7}));
+        System.out.println(BinarySearch.solutionT(new int[]{-1,0,3,5,9,12},2));
     }
 }
