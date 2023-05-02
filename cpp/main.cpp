@@ -4,13 +4,14 @@
 
 #include <iostream>
 #include <vector>
-#include "./Arrays/TwoSum.cpp"
+#include "./Arrays/GroupAnagram.cpp"
 
 using namespace std;
 
 int main() {
-    auto *y = new vector<int>{2, 7, 11, 15};
-    vector<int> i = TwoSum::solution(*y, 9);
-    for (auto y: i)
-        std::cout << y << ' ';
+    vector<std::string> *s = new vector<string>{"eat", "tea", "tan", "ate", "nat", "bat"};
+    vector<vector<string>> i = GroupAnagram::solution(*s);
+    for (auto k: i) {
+
+    }
 };

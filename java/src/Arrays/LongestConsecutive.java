@@ -7,13 +7,15 @@ public class LongestConsecutive {
         int count = 1;
         java.util.Arrays.sort(nums);
         for (int i = 1; i < nums.length; i++) {
-
+//            getting the current number
             int current = nums[i];
             int previousNumber = nums[i - 1];
+//          IF previous is the same skip iteration
             if (previousNumber == current) continue;
-
+//          if current is one number greater then previous increase count
             if (previousNumber + 1 == current) {
                 count++;
+//          else update answer based on current count and reset count
             } else {
                 answer = Math.max(answer, count);
                 count = 1;
@@ -21,6 +23,5 @@ public class LongestConsecutive {
         }
         answer = Math.max(answer, count);
         return answer;
-
     }
 }

@@ -13,7 +13,7 @@ public:
         auto *s = new unordered_set<int>{};
         for (auto i: nums) {
             if (s->find(i) != s->end())return true;
-             s->insert(i);
+            s->insert(i);
         }
         return false;
     };

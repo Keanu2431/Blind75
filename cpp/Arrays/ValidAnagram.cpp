@@ -11,13 +11,19 @@ class ValidAnagram {
 public:
     static bool solution(string s, string t) {
         if (s.length() != t.length())return false;
-        int charMap[26]{0};
-        for (int i = 0; i < s.length(); ++i) {
-            charMap[s[i] - 'a']++;
-            charMap[t[i] - 'a']--;
+        int char_array[26]{0};
+
+        for (int i = 0; i < s.length(); i++) {
+            char current_letter_s = s[i];
+            char current_letter_t = t[i];
+            char_array[current_letter_s - 'a']++;
+            char_array[current_letter_t - 'a']--;
         }
-        for (int i: charMap)
+        cout << *char_array << endl;
+        for (int i: char_array) {
             if (i != 0)return false;
+        }
         return true;
+
     };
 };

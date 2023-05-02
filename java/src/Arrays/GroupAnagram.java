@@ -16,13 +16,13 @@ public class GroupAnagram {
                 hash[c - 'a']++;
             }
 //            CREATE A KEY FOR HASHMAP BASED OFF OF CHARACTER HASH
-            String key = new String(java.util.Arrays.toString(hash));
+            String key = Arrays.toString(hash);
 //            System.out.println(key);
 //            IF HASHMAP DOESNT HAVE A KEY MATCHING THE KEY WE JUST CREATED INITIALIZE IT
 //            WITH EMPTY ARRAY
             map.computeIfAbsent(key, k -> new ArrayList<>());
 //          IN THE HASHMAP WE WANT TO GET THE KEY CORRESPONDING TO CURRENT ITERATIONS
-//            CHARACTER/ALPHABET HASH AND ADD THE CURRENT ITERATIONS STRING TO THE LIST
+//          CHARACTER/ALPHABET HASH AND ADD THE CURRENT ITERATIONS STRING TO THE LIST
             map.get(key).add(s);
         }
 //        HASHMAP.VALUES() RETURNS THE VALUE OF EACH KEY

@@ -2,7 +2,7 @@ package SlidingWindow;
 
 import java.util.HashSet;
 
-public class LengthOfLongestSubstring {
+public class LengthOfLongestSubstringWithoutRepeatingCharacters {
     static public int solution(String s) {
         char[] sChar = s.toCharArray();
         HashSet<Character> characterHashSet = new HashSet<>();
