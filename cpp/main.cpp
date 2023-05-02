@@ -11,7 +11,5 @@ using namespace std;
 int main() {
     vector<std::string> *s = new vector<string>{"eat", "tea", "tan", "ate", "nat", "bat"};
     vector<vector<string>> i = GroupAnagram::solution(*s);
-    for (auto k: i) {
 
-    }
 };

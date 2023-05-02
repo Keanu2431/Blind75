@@ -1,0 +1,15 @@
+/Users/keanu/Desktop/Programming/Blind75/csharp/bin/Debug/net6.0/csharp
+/Users/keanu/Desktop/Programming/Blind75/csharp/bin/Debug/net6.0/csharp.deps.json
+/Users/keanu/Desktop/Programming/Blind75/csharp/bin/Debug/net6.0/csharp.runtimeconfig.json
+/Users/keanu/Desktop/Programming/Blind75/csharp/bin/Debug/net6.0/csharp.dll
+/Users/keanu/Desktop/Programming/Blind75/csharp/bin/Debug/net6.0/csharp.pdb
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.csproj.AssemblyReference.cache
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.AssemblyInfoInputs.cache
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.AssemblyInfo.cs
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.csproj.CoreCompileInputs.cache
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.dll
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/refint/csharp.dll
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.pdb
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/csharp.genruntimeconfig.cache
+/Users/keanu/Desktop/Programming/Blind75/csharp/obj/Debug/net6.0/ref/csharp.dll
