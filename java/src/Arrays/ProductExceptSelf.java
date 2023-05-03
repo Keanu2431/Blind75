@@ -8,6 +8,7 @@ public class ProductExceptSelf {
         int right = 1, left = 1;
 //        ITERATE FROM THE LEFT SIDE OF THE ARRAY ALL THE VALUES AND ASSIGN
         for (int i = 0; i < nums.length; i++) {
+        // assign current to left then update left with current
             arr[i] = left;
             left *= nums[i];
         }

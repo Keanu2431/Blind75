@@ -5,7 +5,7 @@ class Program
 {
     public static void Main(string[] args)
     {
-        IList<IList<string>> i = GroupAnagram.Solution(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+        var i = ProductExceptSelf.Solution(new int[] { 1, 2, 3, 4 });
         Console.WriteLine(JsonSerializer.Serialize(i));
     }
 }
